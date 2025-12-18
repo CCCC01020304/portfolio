@@ -88,14 +88,23 @@ export default function ContactSection() {
 
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <div>
+                        <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Welcome</h3>
+                        <p style={{ color: '#ccc', lineHeight: 1.6, marginBottom: '3rem' }}>
+                            Hello. Thank you for visiting my portfolio site.<br /><br />
+                            Here, I focus on introducing the product design, 3D modeling, and user-centered design works I have conducted. Each project is the result of contemplating the balance between usability, form, and technical implementation.<br /><br />
+                            If you have any questions about my work, or if you would like to collaborate or propose a project, please feel free to leave a message using the form below. I would be happy to discuss it.<br /><br />
+                            Thank you.
+                        </p>
+
                         <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Contact Info</h3>
                         <p style={{ color: '#999', lineHeight: 1.6 }}>
-                            Seoul, South Korea<br />
-                            hello@designengineer.com
+                            <strong style={{ color: '#fff' }}>Yoon Myeongui</strong><br />
+                            Gwangju, South Korea<br />
+                            20253794@chsun.ac.kr
                         </p>
                     </div>
 
-                    <div style={{ display: 'flex', gap: '2rem' }}>
+                    <div style={{ display: 'flex', gap: '2rem', marginTop: '3rem' }}>
                         {['Instagram', 'LinkedIn', 'Behance'].map(social => (
                             <a
                                 key={social}

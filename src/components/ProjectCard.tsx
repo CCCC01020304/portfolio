@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface ProjectCardProps {
     title: string;
@@ -31,13 +32,12 @@ export default function ProjectCard({ title, category, src, index }: ProjectCard
                 top: 0, left: 0, width: '100%', height: '100%',
                 overflow: 'hidden'
             }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                     src={src}
                     alt={title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     style={{
-                        width: '100%',
-                        height: '100%',
                         objectFit: 'cover',
                         transition: 'transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), filter 0.7s ease',
                         filter: isHovered ? 'grayscale(0%) brightness(1)' : 'grayscale(100%) brightness(0.8)',

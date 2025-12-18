@@ -3,6 +3,7 @@ import SmoothScroll from '@/components/SmoothScroll';
 import Hero from '@/components/Hero';
 import ProjectCard from '@/components/ProjectCard';
 import SkillsSection from '@/components/SkillsSection';
+import MoreWorksSection from '@/components/MoreWorksSection';
 import ContactSection from '@/components/ContactSection';
 
 export default function Home() {
@@ -59,6 +60,8 @@ export default function Home() {
       </section>
 
       <SkillsSection />
+
+      <MoreWorksSection />
 
       <ContactSection />
 
