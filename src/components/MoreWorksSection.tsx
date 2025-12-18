@@ -1,6 +1,8 @@
 'use client';
 
 export default function MoreWorksSection() {
+    const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+
     return (
         <section className="section container" style={{ position: 'relative', padding: '4rem 0' }}>
             <h2 className="text-accent uppercase" style={{ fontSize: '3rem', marginBottom: '4rem', textAlign: 'center' }}>
@@ -45,7 +47,7 @@ export default function MoreWorksSection() {
                         <div style={{
                             width: '100%',
                             height: '100%',
-                            backgroundImage: 'url(/images/actor-short-form.png)',
+                            backgroundImage: `url(${basePath}/images/actor-short-form.png)`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             transition: 'transform 0.5s ease'
@@ -86,7 +88,7 @@ export default function MoreWorksSection() {
                         <div style={{
                             width: '100%',
                             height: '100%',
-                            backgroundImage: 'url(/images/ramen-short-form.png)',
+                            backgroundImage: `url(${basePath}/images/ramen-short-form.png)`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             transition: 'transform 0.5s ease'

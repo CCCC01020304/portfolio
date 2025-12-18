@@ -14,6 +14,8 @@ const skills = [
 ];
 
 export default function SkillsSection() {
+    const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+
     return (
         <section className="section container" style={{ position: 'relative' }}>
             {/* Circuit Board / Grid Background Hint */}
@@ -28,7 +30,6 @@ export default function SkillsSection() {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', width: '100%', alignItems: 'center' }}>
                 <div style={{ position: 'relative' }}>
-                    <h2 className="text-accent uppercase" style={{ fontSize: '3rem', marginBottom: '1rem', lineHeight: '1', display: 'block' }}>Visura</h2>
                     <div style={{
                         width: '100%',
                         aspectRatio: '1/1',
@@ -36,7 +37,7 @@ export default function SkillsSection() {
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         backgroundPosition: 'center',
-                        backgroundImage: 'url(/images/visura-eye.png)'
+                        backgroundImage: `url(${basePath}/images/visura-eye.png)`
                     }}></div>
                 </div>
 
@@ -83,7 +84,7 @@ export default function SkillsSection() {
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         backgroundPosition: 'center',
-                        backgroundImage: 'url(/images/visura-eye-colorful-v2.png)'
+                        backgroundImage: `url(${basePath}/images/visura-eye-colorful-v2.png)`
                     }}></div>
                 </div>
 

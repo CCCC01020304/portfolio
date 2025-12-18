@@ -7,6 +7,8 @@ import MoreWorksSection from '@/components/MoreWorksSection';
 import ContactSection from '@/components/ContactSection';
 
 export default function Home() {
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+
   return (
     <main>
       <SmoothScroll />
@@ -43,10 +45,10 @@ export default function Home() {
           width: '100%'
         }}>
           {[
-            { id: 1, title: 'Figure Board', cat: 'Product Design', src: '/images/figure-board.jpg' },
-            { id: 2, title: 'Foreigner', cat: 'Character Art', src: '/images/figure-foreigner.png' },
-            { id: 3, title: 'The Mouse', cat: '3D Sculpting', src: '/images/figure-mouse.png' },
-            { id: 4, title: 'Helmet Concept', cat: 'Hard Surface', src: '/images/figure-helmet.png' }
+            { id: 1, title: 'Figure Board', cat: 'Product Design', src: `${basePath}/images/figure-board.jpg` },
+            { id: 2, title: 'Foreigner', cat: 'Character Art', src: `${basePath}/images/figure-foreigner.png` },
+            { id: 3, title: 'The Mouse', cat: '3D Sculpting', src: `${basePath}/images/figure-mouse.png` },
+            { id: 4, title: 'Helmet Concept', cat: 'Hard Surface', src: `${basePath}/images/figure-helmet.png` }
           ].map((project, index) => (
             <ProjectCard
               key={project.id}
